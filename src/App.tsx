@@ -85,18 +85,18 @@ const INITIAL_PHOTOS: Photo[] = [
   },
   {
     id: 'photo-4',
-    title: 'Pacific Surge',
-    category: 'Landscape',
-    photographer: 'Elena Rostova',
-    location: 'Big Sur, California',
-    date: 'January 12, 2026',
-    camera: 'Canon EOS R5',
-    lens: 'RF 15-35mm f/2.8L IS USM',
-    aperture: 'f/7.1',
-    shutter: '1/500s',
-    iso: '200',
-    url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=85',
-    description: 'Turquoise tides crash relentlessly against dramatic sea stacks, throwing sea mist high into the crisp morning coastal breeze.'
+    title: 'Championship Moments',
+    category: 'Sports',
+    photographer: 'Getty Images / The Athletic',
+    location: 'League Championship',
+    date: 'September 2026',
+    camera: 'Sony Alpha 1',
+    lens: 'FE 70-200mm f/2.8 GM OSS II',
+    aperture: 'f/2.8',
+    shutter: '1/1600s',
+    iso: '1250',
+    url: '/images/image-4.jpg',
+    description: 'Dynamic sports capture showcasing athletic intensity and competitive grit.'
   },
   {
     id: 'photo-5',
@@ -178,7 +178,7 @@ const INITIAL_PHOTOS: Photo[] = [
 export default function App() {
   const [photos, setPhotos] = useState<Photo[]>(() => {
     try {
-      const saved = localStorage.getItem('user_gallery_photos_v3');
+      const saved = localStorage.getItem('user_gallery_photos_v4');
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.length === 9) {
@@ -285,7 +285,7 @@ export default function App() {
   const handleResetGallery = () => {
     setPhotos(INITIAL_PHOTOS);
     try {
-      localStorage.removeItem('user_gallery_photos_v3');
+      localStorage.removeItem('user_gallery_photos_v4');
     } catch {
       // ignore
     }
@@ -299,7 +299,7 @@ export default function App() {
     );
     setPhotos(updated);
     try {
-      localStorage.setItem('user_gallery_photos_v3', JSON.stringify(updated));
+      localStorage.setItem('user_gallery_photos_v4', JSON.stringify(updated));
     } catch {
       // ignore
     }
@@ -319,7 +319,7 @@ export default function App() {
         );
         setPhotos(updated);
         try {
-          localStorage.setItem('user_gallery_photos_v3', JSON.stringify(updated));
+          localStorage.setItem('user_gallery_photos_v4', JSON.stringify(updated));
         } catch {
           // ignore
         }
