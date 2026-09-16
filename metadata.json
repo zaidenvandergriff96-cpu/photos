@@ -1,0 +1,6 @@
+{
+  "name": "Image Gallery",
+  "description": "A curated 9-image photography gallery with a responsive 3x3 grid, fullscreen lightbox, category filters, and detailed EXIF metadata.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
